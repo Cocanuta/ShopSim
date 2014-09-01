@@ -15,19 +15,20 @@ public class Inventory : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		inv = new int[2];
+		inv = new int[3];
 
-		inv [0] = 1;
-		inv [1] = 8;
+		inv = PlayerPrefsX.GetIntArray ("Inventory");
 
-		for (int i = 0; i < inv.Length; i++) {
+
+		for (int i = 1; i < inv.Length; i++) {
 			
-			itemScript.Info(i, out itemName, out itemDescription);
+			itemScript.GetName(i, out itemName);
 			
 			Debug.Log(inv[i] + " x " + itemName + " added to inventory.");
-			
-			
+
 		}
+
+
 
 	}
 	
