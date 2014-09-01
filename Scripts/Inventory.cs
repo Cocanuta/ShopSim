@@ -35,9 +35,11 @@ public class Inventory : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-
-
 	}
 
+	public void Save() {
+
+		PlayerPrefsX.SetIntArray("Inventory", inv);
+
+	}
 }
